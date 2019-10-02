@@ -28,7 +28,7 @@ for logFilePath in dpkgLogs:
     while True:
         line = f.readline()
         if not line: break
-        if line.find(" installed") == -1: continue
+        # if line.find(" installed") == -1: continue
 
         # line = "2019-03-01 09:53:53 status half-installed libllvm3.4:amd64 1:3.4-1ubuntu3"
         words = line.split()

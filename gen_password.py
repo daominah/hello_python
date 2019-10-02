@@ -5,7 +5,8 @@ default_len = 12
 lowers = "abcdefghijklmnopqrstuvwxyz"
 uppers = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 digits = "0123456789"
-symbols = "~!#^_+-s/"
+symbols = "_"
+# symbols = "~!#^_+-"
 all_chars = "".join([lowers, uppers, digits, symbols])
 
 
