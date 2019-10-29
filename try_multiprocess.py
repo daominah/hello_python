@@ -12,7 +12,7 @@ def main():
         child = Process(target=worker, args=(i, inChan, outChan))
         child.start()
     logging.warning("starting the main")
-    for i in range(10):
+    for i in range(20):
         inChan.put(i)
     inChan.put(None)
     sum = 0
