@@ -9,3 +9,6 @@ venv
 .vscode/**
 .idea/**
 *.iml
+
+# apps output
+app.log
