@@ -6,7 +6,7 @@ import time
 
 config = {
     'bootstrap.servers': 'localhost:9092',
-    'group.id': 'mygroup2',
+    'group.id': 'mygroup3',
     'auto.offset.reset': 'earliest'
 }
 
@@ -14,7 +14,7 @@ config = {
 def consume():
     pid = os.getpid()
     c = Consumer(config)
-    c.subscribe(['test2'])
+    c.subscribe(['topic2'])
     print("pid {}".format(pid))
     while True:
         msg = c.poll(1.0)
@@ -24,7 +24,7 @@ def consume():
             print("Consumer error: {}".format(msg.error()))
             continue
         print('Process {} received message: {}'.format(
-            pid, msg.value().decode('utf-8')))
+            pid, str(msg)))
         time.sleep(2)
 
 

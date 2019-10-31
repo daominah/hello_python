@@ -16,7 +16,7 @@ producer: CommonSender = CommonSender({
 
 producer.send(
     tx_id=datetime.datetime.utcnow().isoformat(),
-    topic="notification:",
+    topic="topic2",
     uri="/uri0",
     message_type="MESSAGE",
     body={"data": "data0"},
