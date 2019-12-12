@@ -25,3 +25,4 @@ def gen_password(len=default_len):
 if __name__ == "__main__":
     for i in range(10):
         print(gen_password(12))
+

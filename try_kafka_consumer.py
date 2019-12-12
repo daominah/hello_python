@@ -6,7 +6,7 @@ import time
 
 config = {
     'bootstrap.servers': 'localhost:9092',
-    'group.id': 'mygroup3',
+    'group.id': 'group4',
     'auto.offset.reset': 'earliest'
 }
 
@@ -21,11 +21,11 @@ def consume():
         if msg is None:
             continue
         if msg.error():
-            print("Consumer error: {}".format(msg.error()))
+            print("consumer error: {}".format(msg.error()))
             continue
-        print('Process {} received message: {}'.format(
-            pid, str(msg)))
-        time.sleep(2)
+        print('process %s received message from %s:%s:%s: %s' % (
+            pid, msg.topic(), msg.partition(), msg.offset(), msg.value()))
+        time.sleep(1)
 
 
 children: List[Process] = []
