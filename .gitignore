@@ -12,3 +12,5 @@ venv
 
 # apps output
 app.log
+
+main.py
