@@ -30,8 +30,8 @@ for i, pid in pids.items():
 
 fullLines = []
 for i in pids:
-    fullLine = '{:20}{:9}{}'.format(localAddrs[i], pids[i], paths[i][:100])
+    fullLine = '{:20}{:9}{}'.format(localAddrs[i], pids[i], paths[i])
     fullLines.append(fullLine)
 
-result = '\n'.join(fullLines)
+result = '\n\n'.join(fullLines)
 print(result)
