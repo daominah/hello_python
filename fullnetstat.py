@@ -1,6 +1,6 @@
 import subprocess
 
-stdout = subprocess.check_output('netstat -tlnp'.split(' ')).decode('utf-8')
+stdout = subprocess.check_output('sudo netstat -tlnp'.split(' ')).decode('utf-8')
 netstatLines = stdout.split('\n')
 pids = {}
 localAddrs = {}
