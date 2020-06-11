@@ -3,27 +3,30 @@ def sortLines(s: str) -> str:
     lines.sort()
     ret = '\n'.join(lines)
     print(ret)
+    return ret
 
-sortLines("""
-	  code;
-      refCode;
-      description;
-      descriptionEn;
-      market;
-      lastTradingDate;
-      open;
-      high;
-      low;
-      last;
-      change;
-      rate;
-      tradingVolume;
-      tradingValue;
-      priorTradingVolume;
-      upCount;
-      ceilingCount;
-      downCount;
-      floorCount;
-      unchangedCount;
-      isHighlight;
-      createdAt;""")
+
+if __name__ == "__main__":
+    sortLines("""
+          code;
+          refCode;
+          description;
+          descriptionEn;
+          market;
+          lastTradingDate;
+          open;
+          high;
+          low;
+          last;
+          change;
+          rate;
+          tradingVolume;
+          tradingValue;
+          priorTradingVolume;
+          upCount;
+          ceilingCount;
+          downCount;
+          floorCount;
+          unchangedCount;
+          isHighlight;
+          createdAt;""")
