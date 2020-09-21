@@ -1,9 +1,19 @@
-### List packages to requirements.txt
-```python3.7 -m pip freeze > requirements.txt```  
-```python3.7 -m pip freeze --local > requirements.txt```
+## Init venv
 
-### Remove all packages in requirements.txt
-```python3.7 -m pip uninstall -r requirements.txt -y```
+````bash
+python3.8 -m venv venv
+source venv/bin/activate
+pip install --index-url https://pypi.python.org/simple/ --upgrade pip
+````
 
-### Ubuntu essential packages:
-```apt install python3.7-dev python3-setuptools```
+## List packages to requirements.txt
+
+```python -m pip freeze --local > requirements.txt```
+
+## Remove all packages in requirements.txt
+
+```python -m pip uninstall -r requirements.txt -y```
+
+## Ubuntu essential packages:
+
+```apt install python3.8-dev python3-setuptools```
