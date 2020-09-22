@@ -9,6 +9,8 @@ pip install --index-url https://pypi.python.org/simple/ --upgrade pip
 ## List packages to requirements.txt
 
 ```python -m pip freeze --local > requirements.txt```
+or
+````python -m pip freeze --local  | grep -v "pkg-resources" > requirements.txt````
 
 ## Remove all packages in requirements.txt
 
